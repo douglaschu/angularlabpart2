@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: open sans;
+    font-weight: 300;  
+}
+
+body {
+    background-image: linear-gradient(to right, #f857a6, #ff5858);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.box {
+    background-color: #ffffff;
+}
