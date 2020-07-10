@@ -13,11 +13,13 @@ export class TodoComponent implements OnInit {
   todos = TODOS;
   selectedTodo: Todo;
 
-  private isButtonVisible = true;  
+  markComplete(item) {
+    item.completed = true;
+  }
   
   constructor() { }
 
-  ngOnInit(): {
+  ngOnInit() {
   }
 
 }
