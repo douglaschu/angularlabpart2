@@ -3,13 +3,12 @@
     flex-direction: column;
 }
 
-.add {
-    width: 100%;
-    background-color: #ff1493;
-    color: #ffffff;
-    font-size: 1em;
-}
+
 
 input {
     font-size: 1em;
+}
+
+h1 {
+    font-weight: 350;
 }

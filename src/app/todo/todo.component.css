@@ -1,11 +1,12 @@
 li {
     display: flex;
-    
+    list-style-position: inside;
 }
 
 input {
     font-size: 1.5em;
 }
+
 
 .add-new {
     display: flex;
@@ -17,6 +18,7 @@ input {
     background-color: #ff1493;
     color: #ffffff;
     font-size: 1em;
+    font-weight: 350;
 }
 
 input {

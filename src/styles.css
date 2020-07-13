@@ -3,11 +3,24 @@
     font-weight: 300;  
 }
 
-body {
+html {
+    background-size: cover;
     background-image: linear-gradient(to right, #f857a6, #ff5858);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    background-repeat: no-repeat;
 }
+
+/* body {
+    
+    
+    background-color: #ffffff;
+    /* margin: 1em; */
+    /* padding: 0.5em; 
+    /* padding: 0.5em; 
+} */
 
 .box {
     background-color: #ffffff;
+    margin: 1em;
+    padding: 1em;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }

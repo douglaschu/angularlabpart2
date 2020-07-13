@@ -2,8 +2,9 @@
 <input [(ngModel)]='todoFilter' type='text' placeholder='Filter your to-dos'>
 <ol class='todos'>
     <div class = 'item'>
-    <li *ngFor = "let todo of todos | filter: todoFilter">
+    <li *ngFor = "let todo of todos | filter: todoFilter; index as i;">
         <div>
+            <span>{{i + 1}}.&nbsp;</span>
             <span [ngStyle]="todo.completed && {'text-decoration': 'line-through'}">{{ todo.task }}</span>
         </div>
         <button class='complete' *ngIf='!todo.completed' (click)='markComplete(todo)'>Complete</button>
