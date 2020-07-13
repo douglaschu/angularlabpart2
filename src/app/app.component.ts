@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Todo } from 'src/app/todo';
-//imports service stuff so I can sue it
+//imports service stuff so I can use it
 //import { TodoDataService } from './todo-data.service'
 
 @Component({

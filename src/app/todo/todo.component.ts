@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from 'src/app/todo';
+//import { filter } from 'src/app';
+
 //import { TODOS } from '../todo-list';
   //not using array from separate file anymore, too hard to keep track
 
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css']
+  styleUrls: ['./todo.component.css'],
+  //providers: [filter]
 })
 
 export class TodoComponent implements OnInit {
@@ -21,6 +24,8 @@ export class TodoComponent implements OnInit {
     {task: 'Wash face', completed: false},
     {task: 'Brush teeth', completed: false}
 ];
+  
+  todoFilter: string = '';
 
   selectedTodo: Todo;
 
@@ -41,6 +46,7 @@ export class TodoComponent implements OnInit {
   }
   
   constructor() { }
+  //constructor(private filterPipe : filter) { }
 
   ngOnInit() {
   }
