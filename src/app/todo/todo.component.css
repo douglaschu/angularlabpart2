@@ -6,3 +6,19 @@ li {
 input {
     font-size: 1.5em;
 }
+
+.add-new {
+    display: flex;
+    flex-direction: column;
+}
+
+.add {
+    width: 100%;
+    background-color: #ff1493;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+input {
+    font-size: 1em;
+}

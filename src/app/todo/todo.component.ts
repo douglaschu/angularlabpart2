@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from 'src/app/todo';
-import { TODOS } from '../todo-list';
+//import { TODOS } from '../todo-list';
+  //not using array from separate file anymore, too hard to keep track
 
 @Component({
   selector: 'app-todo',
@@ -10,11 +11,33 @@ import { TODOS } from '../todo-list';
 
 export class TodoComponent implements OnInit {
   
-  todos = TODOS;
+  //todos = TODOS; 
+  //Angular tutorial used separate file to store array, but it's just overcomplicating things for me.
+  
+  todos: Todo[] = [
+    {task: 'Make bed', completed: true},
+    {task: 'Take meds', completed: true},
+    {task: 'Shower', completed: false},
+    {task: 'Wash face', completed: false},
+    {task: 'Brush teeth', completed: false}
+];
+
   selectedTodo: Todo;
 
   markComplete(item) {
     item.completed = true;
+  }
+
+  addTask(newTodoTask) {
+    let newTodo = {
+      task: newTodoTask,
+      completed: false
+    };
+    this.todos.push(newTodo);
+  }
+
+  removeTodo(todo) {
+    this.todos = this.todos.filter( t => t.task !== todo.task);
   }
   
   constructor() { }

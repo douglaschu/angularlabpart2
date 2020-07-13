@@ -1,15 +1,22 @@
 <div class='list'>
-<input type='text' placeholder='Filter your to-dos'>
+<input [(ngModel)]='todoFilter' type='text' placeholder='Filter your to-dos'>
 <ol class='todos'>
     <div class = 'item'>
-    <li *ngFor = "let todo of todos">
+    <li *ngFor = "let todo of todos | filter: todoFilter">
         <div>
             <span [ngStyle]="todo.completed && {'text-decoration': 'line-through'}">{{ todo.task }}</span>
         </div>
         <button class='complete' *ngIf='!todo.completed' (click)='markComplete(todo)'>Complete</button>
-        <button class='x' (click)='removeTodo(todo)'>X</button>
+        <button class='remove' (click)='removeTodo(todo)'>X</button>
     </li>
     
     </div>
 </ol>
 </div>
+<div class='add-new'>
+    <input type='text' #newTodo 
+    placeholder='Add a new to-do item'
+    (keyup.enter)="addTask(newTodo.value)"> 
+        <!-- This allows for submitting the input by pressing 'enter' -->
+    <button class='add' (click)='addTask(newTodo.value)'>Add</button>
+  </div>
