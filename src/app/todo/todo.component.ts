@@ -41,6 +41,15 @@ export class TodoComponent implements OnInit {
     this.todos.push(newTodo);
   }
 
+  // addTask2():void{
+  //   let result:Todo = {
+  //     task: this.newTask.task,
+  //     completed: this.newTask.completed
+  //   }
+  //   this.allTasks.push(result);
+  //   this.newTask = {} as Todo;
+  // }
+
   removeTodo(todo) {
     this.todos = this.todos.filter( t => t.task !== todo.task);
   }
